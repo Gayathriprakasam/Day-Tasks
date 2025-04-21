@@ -1,3 +1,5 @@
+//operators add and sub
+
 #include<stdio.h>
 int main()
 {
@@ -7,6 +9,28 @@ scanf("%d %d",&a,&b);
 a=a+b;
 b=a-b;
 a=a-b;
+
+printf("%d %d",a,b);
+return 0;
+}
+
+output:
+Enter value : 6 2
+2 6
+
+
+
+
+//operators mul and div
+#include<stdio.h>
+int main()
+{
+int a,b;
+printf("Enter value : ");
+scanf("%d %d",&a,&b);
+a=a*b;
+b=a/b;
+a=a/b;
 
 printf("%d %d",a,b);
 return 0;
