@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+int row,col,num;
+printf("Enter number: ");
+scanf("%d",&num);
+for(row=1;row<=num;row++)
+{
+ printf(" \n");
+ for(col=1;col<=num;col++)
+    if(row==1||row==num||col==1||col==num)
+ {
+     printf("*");
+}
+else
+{
+printf(" ");
+}
+}
+}
+
+
+
+output:
+Enter number: 7
+
+*******
+*     *
+*     *
+*     *
+*     *
+*     *
+*******
