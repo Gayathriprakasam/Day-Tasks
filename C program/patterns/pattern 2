@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main()
+{
+int row,col,num;
+printf("Enter number: ");
+scanf("%d",&num);
+for(row=0;row<=num;row++)
+{
+ printf("\n");
+ for(col=0;col<=num;col++)
+    if(row==0||col==num||row==col)
+ {
+     printf("*");
+}
+else
+{
+printf(" ");
+}
+}
+ }
+
+
+Enter number: 9
+
+**********
+ *       *
+  *      *
+   *     *
+    *    *
+     *   *
+      *  *
+       * *
+        **
+         *
