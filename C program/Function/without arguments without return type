@@ -1,0 +1,18 @@
+#include<stdio.h>
+void Sum();
+int main()
+{
+ Sum();
+ }
+void Sum()
+{
+ int a,b,c;
+ printf("Enter value: ");
+ scanf("%d %d",&a,&b);
+ printf("%d",a+b);
+}
+
+
+output:
+Enter value: 34  6
+40
