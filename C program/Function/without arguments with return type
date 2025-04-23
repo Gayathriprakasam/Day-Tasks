@@ -1,0 +1,19 @@
+#include<stdio.h>
+int Sum();
+int main()
+{
+ int c;
+ c=Sum();
+ printf("%d",c);
+ }
+int Sum()
+{
+ int a,b,c;
+ printf("Enter value: ");
+ scanf("%d %d",&a,&b);
+ return a+b;
+}
+
+output:
+Enter value: 15 28
+43
