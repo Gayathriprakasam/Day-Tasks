@@ -1,0 +1,43 @@
+#include<reg51.h>
+sbit s1=P1^0;
+sbit s2=P1^1;
+sbit s3=P1^2;
+sbit RED=P2^0;
+sbit YELLOW=P2^1;
+sbit GREEN=P2^2;
+
+void delay()
+ {
+    int i;
+    for(i = 0; i <1275; i++);
+
+}	 
+void main()
+{
+P1=0xff;
+P2=0x00;
+
+while(1)
+{  
+if(s1==0)
+{
+RED=1;
+delay();
+}
+else if(s2==0)
+{
+RED=0;
+YELLOW=1;
+delay();
+}
+else if(s3==0)
+{
+RED=YELLOW=0;
+GREEN=1;
+delay();
+}
+RED=YELLOW=GREEN=0;
+}
+}
+
+
