@@ -1,0 +1,68 @@
+#include<reg51.h>
+sbit rs=P1^0;
+sbit rw=P1^1;
+sbit e=P1^2;
+sbit l=P1^5;
+void lcdcmd(unsigned char);
+void lcddata(unsigned char);
+void delay();
+void main()
+{
+P2=0x00;
+P1=0xff;
+while(1)
+{
+lcdcmd(0x38);
+delay();
+lcdcmd(0x01);
+delay();
+lcdcmd(0x10);
+delay();
+lcdcmd(0x0c);
+delay();
+lcdcmd(0x81);
+delay();
+if(l==1)
+{
+lcddata('o');
+lcddata('n');
+}
+else
+{
+lcddata('o');
+lcddata('f');
+lcddata('f');
+
+}
+delay();
+}
+}
+void lcdcmd(unsigned char val)
+{
+P2=val;
+rs=0;
+rw=0;
+e=1;
+delay();
+e=0;
+}
+void lcddata(unsigned char val)
+{
+P2=val;
+rs=1;
+rw=0;
+e=1;
+delay();
+e=0;
+}
+void delay()
+{
+unsigned int i;
+for(i=0;i<2000;i++);
+}
+
+
+
+
+
+
